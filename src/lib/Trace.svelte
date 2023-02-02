@@ -26,5 +26,10 @@
   #trace_container {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    padding:0.5rem;
+    border: 2px solid black;
+    border-radius: 10px;
   }
 </style>

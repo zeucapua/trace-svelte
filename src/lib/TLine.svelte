@@ -9,21 +9,24 @@
 </script>
 
 {#if value >= $highlighted[0] && value <= $highlighted[1]}
-  <div id="tline_container" class="traced">
+  <div id="traced" class="tline_container"> 
     <slot />
   </div>
 {:else}
-  <div id="tline_container">
+  <div class="tline_container">
     <slot />
   </div>
 {/if}
 
 <style>
-  #tline_container {
+  .tline_container {
     display: inline-block;  
+    margin: 0;
+    padding: 0.5rem;
+    opacity: 0.5;
   }
 
-  .traced {
-    background-color: lightblue;
+  #traced {
+    opacity: 1;
   }
 </style>
