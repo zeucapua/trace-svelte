@@ -8,7 +8,7 @@
 
 </script>
 
-{#if value >= $highlighted[0] && value <= $highlighted[1]}
+{#if $highlighted.includes(value)}
   <div id="traced" class="tline_container"> 
     <slot />
   </div>

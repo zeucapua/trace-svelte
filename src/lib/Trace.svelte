@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { onMount, setContext } from "svelte";
+  import { setContext } from "svelte";
   import { writable } from "svelte/store";
 
   // props
   export let step : number = 0;
-  export let highlights : number[][] = [[0,0]];
+  export let highlights : number[][] = [[0]];
 
   // for context to TLine
   let start_index = 0;

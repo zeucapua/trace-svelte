@@ -4,10 +4,10 @@
 
   let step = 0;
   let highlights = [
-    [0,0],
-    [1,2],
-    [0,0],
-    [2,2]
+    [],
+    [1],
+    [1,3],
+    [2]
   ];
 
   function increment() { step = step === highlights.length - 1 ? step : step += 1; }
@@ -20,6 +20,11 @@
       <TLine>
         <p style:margin="0" style:font-family="monospace" style:font-size="16px">
           const name = "Joe";
+        </p>
+      </TLine>
+      <TLine>
+        <p style:margin="0" style:font-family="monospace" style:font-size="16px">
+          // use that variable!
         </p>
       </TLine>
       <TLine>
