@@ -1,44 +1,21 @@
 <script lang="ts">
-  import Trace from "$lib/Trace.svelte"; 
-  import TLine from "$lib/TLine.svelte";
-
-  let step = 0;
-  let highlights = [
-    [],
-    [1],
-    [1,3],
-    [2]
-  ];
-
-  function increment() { step = step === highlights.length - 1 ? step : step += 1; }
-  function decrement() { step = step === 0 ? step : step -= 1; }
+  import SimpleExample from "./SimpleExample.svelte";
+  import HowItWorks from "./HowItWorks.svelte";
+  import AutoplayExample from "./AutoplayExample.svelte";
 </script>
 
 <main>
-  <div class="trace">
-    <Trace {step} {highlights}>
-      <TLine>
-        <p style:margin="0" style:font-family="monospace" style:font-size="16px">
-          const name = "Joe";
-        </p>
-      </TLine>
-      <TLine>
-        <p style:margin="0" style:font-family="monospace" style:font-size="16px">
-          // use that variable!
-        </p>
-      </TLine>
-      <TLine>
-        <p style:margin="0" style:font-family="monospace" style:font-size="16px">
-          console.log(name);
-        </p>
-      </TLine>
-    </Trace>
+  <div class="description">
+    <h1>trace-svelte</h1>
+    <h2>A line by line highlighter for Svelte</h2>
+    <p>
+      <span style:font-weight="bold">GOAL</span>: 
+      Create a code highlighter that has no dependencies and is fully extensible with great developer experience (DX)
+    </p>
   </div>
-
-  <div class="control">
-    <button on:click={decrement}>{"<-"}</button>
-    <button on:click={increment}>{"->"}</button>
-  </div>
+  <SimpleExample />
+  <HowItWorks />
+  <AutoplayExample />
 </main>
 
 <style>
@@ -48,17 +25,10 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    font-family: sans-serif;
   }
 
-  .trace {
-    width: 33%; 
+  .description {
     margin: 0 auto;
-  }
-
-  .control {
-    display: inline-flex;
-    flex-direction: row;
-    margin: 0 auto;
-    gap: 0.5rem;
   }
 </style>
