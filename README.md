@@ -2,7 +2,7 @@
 
 **STATUS**: barely alpha, like a sad omegaverse protagonist.
 
-Visit trace-site.vercel.app to check more examples and a live editor
+Visit [trace-svelte.vercel.app](https://trace-svelte.vercel.app) to check more examples and a live editor
 
 ## Components:
 - **Trace.svelte**: A wrapper around the lines that control what is highlighted.
