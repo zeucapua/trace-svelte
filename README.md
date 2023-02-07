@@ -1,6 +1,7 @@
-# Trace: A line by line highlighter for Svelte
+# trace-svelte: A line by line highlighter for Svelte
 
 **STATUS**: barely alpha, like a sad omegaverse protagonist.
+Visit trace-site.vercel.app to check more examples and a live editor
 
 ## Components:
 - **Trace.svelte**: A wrapper around the lines that control what is highlighted.
@@ -10,17 +11,20 @@
 ```svelte
 <!-- App.svelte -->
 <script>
+  import { Trace, TLine } from "trace-svelte";
+
   let step = 0; // based on the highlights array below
   let highlights = [
-    [0,0], // lines start at 1, so for no highlights, use 0
-    [1,1], // to highlight a single line, use same number on both
-    [0,0], // another empty highlight step
-    [1,2], // use a range to select multiple lines (inclusive)
+    [], // no highlights = empty array
+    [1], // to highlight a line, add to array (starts at 1) 
+    [1,3], // include multiple lines
+    [2]
   ]
 </script>
 
 <Trace {step} {highlights}>
-  <TLine>const variable = 1;</TLine>
+  <TLine>const name = "Joe";</TLine>
+  <TLine>// use that variable</TLine>
   <TLine>console.log(variable)</TLine>
 </Trace>
 ```
