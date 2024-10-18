@@ -1,6 +1,6 @@
 # trace-svelte: A line by line highlighter for Svelte
 
-**STATUS**: barely alpha, like a sad omegaverse protagonist.
+**STATUS**: alpha.
 
 Visit [trace-svelte.vercel.app](https://trace-svelte.vercel.app) to check more examples and a live editor
 
